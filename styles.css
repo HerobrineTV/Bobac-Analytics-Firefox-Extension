@@ -1,0 +1,40 @@
+#rare-image {
+  width: 200px;
+  height: 100px;
+  position: relative;
+  top: 50px;
+  left: 20px;
+}
+.sales-grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  background-color: #232527;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.sales-grid-item {
+  background-color: #2E3032;
+  padding: 30px;
+  font-size: 24px;
+  text-align: center;
+  color: white;
+  border-radius: 20px 20px 20px 20px;
+  font-weight: bold;
+  max-width: 182px;
+  width: 182px;
+  max-height: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sales-container {
+  justify-content: center;
+  align-items: center;
+  width: 970px;
+  text-align: center;
+}

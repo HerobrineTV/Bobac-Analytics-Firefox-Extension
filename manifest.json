@@ -1,0 +1,75 @@
+{
+  "manifest_version": 2,
+  "name": "Bobac Analytics",
+  "version": "0.1.8",
+  "description": "Best Roblox Addon u can find. Best Values u can find!!",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "*://*.roblox.com/*",
+    "*://*.rbxcdn.com/*",
+    "storage",
+    "tabs",
+    "activeTab",
+    "https://www.rolimons.com/itemapi/*",
+    "https://api.bobac-analytics.com/*"
+  ],
+  "icons": {
+    "48": "icon.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.roblox.com/*",
+        "*://web.roblox.com/*"
+      ],
+      "js": [
+        "content.js",
+        "scripts/main.js"
+      ],
+      "css": [
+        "styles.css"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "*://*.roblox.com/trades",
+        "*://web.roblox.com/trades"
+      ],
+      "js": [
+        "content.js",
+        "scripts/trades.js"
+      ]
+    },
+    {
+      "matches": [
+        "*://*.roblox.com/catalog/*",
+        "*://web.roblox.com/catalog/*"
+      ],
+      "js": [
+        "content.js",
+        "scripts/catalog.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "images/*",
+    "settings.html",
+    "css/*",
+    "backgrounds/*",
+    "styles.css",
+    "scripts/*"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{4ccb73b7-f32b-455b-b6d2-9b44634be25c}"
+    }
+  },
+  "short_name": "RbxAnalytics"
+}
